@@ -4,8 +4,11 @@ if os.getenv("LOCAL_LUA_DEBUGGER_VSCODE") == "1" then
 
 print("hello World")
 
+local page = {x=100,y=100,w=love.graphics.getWidth()-200,h=love.graphics.getHeight()-200}
+
+
  function love.draw()
-    love.graphics.print("Hello World!", 400, 300)
+    love.graphics.rectangle("line",page.x,page.y,page.w,page.h)
     end
 
 
